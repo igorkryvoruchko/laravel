@@ -16,6 +16,17 @@
     <app></app>
 </div>
 
+<div id="first">
+    <first></first>
+</div>
+
+
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
+<script>
+    import First from "../js/views/first";
+    export default {
+        components: {First}
+    }
+</script>
