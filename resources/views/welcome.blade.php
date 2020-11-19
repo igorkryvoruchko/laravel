@@ -11,22 +11,22 @@
 
     <title>{{env('APP_NAME')}}</title>
 </head>
+
 <body>
 <div id="app">
     <app></app>
 </div>
 
 <div id="first">
-    <first></first>
+    <example-component></example-component>
+</div>
+
+<div id="prop">
+    <prop-component :data="{{ json_encode($array)}}"></prop-component>
 </div>
 
 
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
-<script>
-    import First from "../js/views/first";
-    export default {
-        components: {First}
-    }
-</script>
+

@@ -1,18 +1,14 @@
 require('./bootstrap');
-import Vue from 'vue'
+window.Vue = require('vue');
 
-//Main pages
-import App from './views/app.vue'
-
-
-const app = new Vue({
-    el: '#app',
-    components: { App }
-});
-
-import First from './views/first.vue'
+Vue.component('example-component', require('./views/first.vue').default);
+Vue.component('prop-component', require('./views/prop.vue').default);
 
 const first = new Vue({
-    el: '#first',
-    components: { First }
+    el: '#first'
 });
+
+const prop = new Vue({
+    el: '#prop'
+});
+
